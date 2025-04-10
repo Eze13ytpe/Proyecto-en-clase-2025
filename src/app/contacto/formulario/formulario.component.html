@@ -1,1 +1,5 @@
-<p>formulario works!</p>
+<form >
+    <label for="nombre">nombre:</label>
+    <input id="nombre" [(ngModel)]="usuario.nombre" name="nombre" required>
+    <button [disabled]="!usuario.nombre">enviar</button>
+</form>

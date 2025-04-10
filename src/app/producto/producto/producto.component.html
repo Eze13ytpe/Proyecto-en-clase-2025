@@ -1,27 +1,19 @@
-<div class="card-container">
-    <div class="card" >
-        <img src="/assets/momoneta.webp" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
+      <!-- <div *ngFor="let producto of productos; let i= index">
+        <p>{{i+1}}.Nombre: {{producto.nombre}}</p>
+        <p>precio: {{producto.precio}}</p>
       </div>
-      <div class="card" >
-        <img src="/assets/messichiquito.webp" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
+    -->
+      <!--
+      <div *ngIf="usuario.isLoggedIn">
+        <p>Bienvenido, {{usuario.nombre }}</p>
       </div>
-      <div class="card">
-        <img src="/assets/messipelado.webp" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
+      <div *ngIf="!usuario.isLoggedIn">
+        <p>por favor, inicia sesion</p>
       </div>
+    
+      
+<div [ngClass]="{'activo':usuario.activo , 'inactivo':usuario.activo}">
+  {{usuario.nombre}} 
 </div>
+  -->
 
