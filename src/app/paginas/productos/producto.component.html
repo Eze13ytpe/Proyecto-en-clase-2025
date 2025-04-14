@@ -1,8 +1,15 @@
-      <!-- <div *ngFor="let producto of productos; let i= index">
+<div class="card-container">
+  <div class="card" >
+     
+    <div class="row">
+       <div *ngFor="let producto of productos; let i= index">
         <p>{{i+1}}.Nombre: {{producto.nombre}}</p>
         <p>precio: {{producto.precio}}</p>
+        <img [src]="producto.imagen" alt="">
       </div>
-    -->
+    </div>  
+    </div>
+
       <!--
       <div *ngIf="usuario.isLoggedIn">
         <p>Bienvenido, {{usuario.nombre }}</p>
