@@ -12,13 +12,13 @@ export class ProductoComponent {
 productos =[
   {nombre : 'producto 1', precio:100, imagen :"/assets/messichiquito.webp"},
   {nombre :'producto 2',precio: 150, imagen: "/assets/messichiquito.webp"},
-  {nombre : 'producto 3',precio: 200, imagen:"/assets/messichiquito.webp"}
+  {nombre : 'producto 3',precio: 200, imagen:"/assets/momazo.webp"},
+  {nombre : 'producto 3',precio: 200, imagen:"/assets/momazo.webp"},
+  {nombre : 'producto 3',precio: 200, imagen:"/assets/momazo.webp"},
+  {nombre : 'producto 3',precio: 200, imagen:"/assets/momazo.webp"}
 ]
 
 
-usuario={
-  nombre: 'messi',
-  activo: true
-}
+
   
 }

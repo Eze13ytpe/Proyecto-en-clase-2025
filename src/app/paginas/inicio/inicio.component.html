@@ -1,27 +1,17 @@
-<div class="card-container">
-    
-    <div class="card" >
-        <img src="/assets/momoneta.webp" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-      <div class="card" >
-        <img src="/assets/momojpgasd.webp" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="/assets/momazo.webp" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
+<div *ngIf="usuario.isLoggedIn">
+  <p>Bienvenido, {{usuario.nombre }}</p>
 </div>
+<div *ngIf="!usuario.isLoggedIn">
+  <p>por favor, inicia sesion</p>
+  
+  <form action="iniciar sesion">
+    <label for="nombre">Ingresa el nombre:</label> <br>
+    <input type="text" name="" id="nombre" >
+    <br>
+    <label for="contraseña">Ingresa la contraseña:</label> <br>
+    <input type="password" name="" id="contraseña"> <br>
+    <input type="button" value="enviar" disabled>
+  </form>
+
+</div>
+
