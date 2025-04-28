@@ -4,6 +4,6 @@ export interface producto{
     descripcion :string
     precio: number
     imagen:string
-    disponible:boolean
-    categoria?:number
+    disponibilidad:boolean
+    
 }

@@ -25,7 +25,14 @@
           </li>
         </div>
         <form class="d-flex" role="search">
-          
+          <li>
+            <a [routerLink]="['/carrito']">
+              <i class="bi bi-cart"></i>
+              <span *ngIf="cantidadProductos > 0">
+                ({{cantidadProductos}})
+              </span>
+            </a>
+          </li>
           
           
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
