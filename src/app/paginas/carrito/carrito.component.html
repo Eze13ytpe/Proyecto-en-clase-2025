@@ -1,5 +1,5 @@
 <h1> Carrito de compras</h1>
-<div *ngif="ProductosEnCarrito.length ===0">
+<div *ngIf = "productosEnCarrito.length === 0">
     <p>No hay productos en el Carrito</p>
 </div>
 <table class="table">
@@ -14,15 +14,15 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngfor="let item of ProductosEnCarrito; let i=index">
-            <td> <img [src]="item.producto.Imagen" alt="{{item.producto.Nombre}}" style="width: 50px; height: 50px;"></td>
-            <td>{{item.producto.Imagen}}</td>
-            <td>{{item.producto.Descripcion}}</td>
+        <tr *ngFor = "let item of productosEnCarrito; let i = index">
+            <td><img [src] = "item.producto.imagen" alt="{{item.producto.nombre}}" style="width: 50px; height: 50px;"></td>
+            <td>{{item.producto.nombre}}</td>
+            <td>{{item.producto.descripcion}}</td>
             <td>{{item.producto.precio }}</td>
             <td>
-                <button (clcik)="quitarCantidad(i)">-</button>
+                <button (click) ="quitarCantidad(i)">-</button>
                 {{item.cantidad}}
-                <button (click)="agregarCantidad(i)">+</button>
+                <button (click) ="agregarCantidad(i)">+</button>
             </td>
             <td>
                 <button (click)="eliminarProducto(item.producto.id)">Eliminar </button>

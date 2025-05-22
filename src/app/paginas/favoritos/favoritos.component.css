@@ -7,14 +7,14 @@ body {
 
 /*contenedor de las tarjetas*/
 .card-container {
-    display: flex;
+    display: grid;
     justify-content: center;
     /*centra las tarjetas*/
     gap: 30px;
     /*espacio entre las tarjetas*/
     flex-wrap: wrap;
     padding: 20px;
-
+grid-template-columns: repeat(4, 1fr);  
 }
 #estrella-favorito {
   position: absolute;
@@ -34,7 +34,7 @@ body {
 .card-img {
     width: 100%;
     height: 200px;
-    object-fit:co ;
+    object-fit: cover;
 }
 
 /*estilo del boton*/
@@ -51,16 +51,16 @@ body {
 }
 .card-cantainer {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   flex-direction: column; /* Esto los pone en columna */
   align-items: center;    /* Centra las tarjetas horizontalmente */
   gap: 20px;              /* Espacio entre tarjetas */
-  padding: 80px;
-  }
+  padding: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));/*crea tantas columnas como quepan, cada una de mínimo 250px y máximo 1 fracción del ancho disponible.*/
+}
 
 .card {
   width: 300px;            /* Opcional, tamaño de cada tarjeta */
-  height: fit-content;
+  height: 500px;
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 10px;
@@ -81,37 +81,4 @@ body {
     }
 
 
-}
-/* From Uiverse.io by andrew-demchenk0 */ 
-.container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-.container {
-  display: block;
-  position: relative;
-  cursor: pointer;
-  user-select: none;
-}
-
-.container svg {
-  position: relative;
-  top: 0;
-  left: 0;
-  height: 50px;
-  width: 50px;
-  transition: all 0.3s;
-  fill: #666;
-}
-
-.container svg:hover {
-  transform: scale(1.1);
-}
-
-.container input:checked ~ svg {
-  fill: #ffeb49;
 }

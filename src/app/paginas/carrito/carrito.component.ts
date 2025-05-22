@@ -1,11 +1,12 @@
-import { NgFor, NgIf } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { producto } from '../../model/producto.model';
 import { CarritoService } from '../../servicios/carrito.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-carrito',
-  imports: [NgIf, NgFor],
+  imports: [CommonModule,FormsModule],
   templateUrl: './carrito.component.html',
   styleUrl: './carrito.component.css'
 })
@@ -26,8 +27,7 @@ export class CarritoComponent implements OnInit {
 
   quitarCantidad(index: number) {
     if (this.productosEnCarrito[index].cantidad > 1) {
-      this.productosEnCarrito[index].cantidad--
-
+      this.productosEnCarrito[index].cantidad--;
     }
   }
   eliminarProducto(productoId: number) {
