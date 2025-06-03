@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { producto } from '../../model/producto.model';
 import { CarritoService } from '../../servicios/carrito.service';
 import { FormsModule } from '@angular/forms';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-carrito',
   imports: [CommonModule,FormsModule],
@@ -13,7 +13,7 @@ import { FormsModule } from '@angular/forms';
 export class CarritoComponent implements OnInit {
   productosEnCarrito: { producto: producto; cantidad: number }[] = []
 
-  constructor(private carritoService: CarritoService) { }
+  constructor(private carritoService: CarritoService, private router :Router) { }
 
   ngOnInit(): void {
     this.carritoService.carrito$.subscribe((productos) => {
@@ -36,8 +36,12 @@ export class CarritoComponent implements OnInit {
   vaciarCarrito() {
     this.carritoService.vaciarCarrito()
   }
-  realizarCompra() {
-    alert('compra realizada')
-    this.vaciarCarrito
+ 
+  //nevega al formulario de compra 
+  irAFormularioCompra(){
+    //Redirije al usuario a la ruta de compra /compra , donde se encuentra el formulario para finalizar la compra
+    this.router.navigate([`/compra`])
   }
+
+
 }
