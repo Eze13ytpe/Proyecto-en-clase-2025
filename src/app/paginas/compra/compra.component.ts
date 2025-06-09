@@ -126,39 +126,43 @@ export class CompraComponent implements OnInit {
       )
     })
     //costos Final
-    y+= 10
+    y += 10
     doc.text(`Costo de envio: $${this.factura.envio.toFixed(2)}`, 14, y)
-    y+= 10
-    doc.text(`total a pagar: $${this.factura.total.toFixed(2)}`,14,y)
+    y += 10
+    doc.text(`total a pagar: $${this.factura.total.toFixed(2)}`, 14, y)
+
+    const pdfBlob = doc.output('blob')
     const pdfSRC = this.sanitizer.bypassSecurityTrustResourceUrl(URL.createObjectURL(pdfBlob))
 
     // Abre el modal que contiene el PDF
     this.mostrarModal = true
   }
   //Metodo para cerrar el modal y liberar la URL del PDF para evitar fugas de memoria
-  cerrarModal():void{
+  cerrarModal(): void {
     this.mostrarModal = false
-    if(this.pdfSRC){
+    if (this.pdfSRC) {
       //Sr revoca la URL para liberar recursos
       URL.revokeObjectURL((this.pdfSRC as any).changingThisBreakApplicationSecurity)
-      this.pdfSRC =undefined   
+      this.pdfSRC = undefined
     }
   }
-//metodo imprimir el PDF que esta cargando dentro del Iframe en la vista
-imprimirPDF():void{
-  //obtiene la referencia al elemento Iframe del DOM mediante su ID `pdfFrame
-  //puede devolver null si no enccuentra el elemento
+  //metodo imprimir el PDF que esta cargando dentro del Iframe en la vista
+  imprimirPDF(): void {
+    //obtiene la referencia al elemento Iframe del DOM mediante su ID `pdfFrame
+    //puede devolver null si no enccuentra el elemento
 
-  const iFrame : HTMLIFrameElement | null= document.getElementById(`pdfFrame`)as HTMLIFrameElement
+    const iframe: HTMLIFrameElement | null = document.getElementById(`pdfFrame`) as HTMLIFrameElement
 
-  //verifica que el iframe exista y que tenga un objetivo contenido valido
-  if(iFrame && iFrame.contentWindow)
-    //le da foco al contenido del iframe para asegurarse que la venta correcta esta activa para imprimir
-  iFrame.contentWindow.focus()
+    //verifica que el iframe exista y que tenga un objetivo contenido valido
+    if (iframe && iframe.contentWindow) {
+      //le da foco al contenido del iframe para asegurarse que la venta correcta esta activa para imprimir
+      iframe.contentWindow.focus()
 
-  //llama al metodo print() de la ventana del iframe para abrir la ventanta de la impresion del navegador
-  iFrame.contentWindow.print()
-  
-}
+      //llama al metodo print() de la ventana del iframe para abrir la ventanta de la impresion del navegador
+      iframe.contentWindow.print()
 
+
+    }
+
+  }
 }

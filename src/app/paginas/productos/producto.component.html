@@ -26,7 +26,7 @@
           <p>{{producto.descripcion || 'Sin descripción disponible.'}}</p>
         </ng-container>
 
-        <p>Precio : {{producto.precio}}</p>
+        <p>Precio : {{producto.precio | currency}}</p>
         <button type="button" class="btn btn-outline-primary" (click)="agregar(producto)">Agregar al Carrito</button>
       </div>
     </ng-container>

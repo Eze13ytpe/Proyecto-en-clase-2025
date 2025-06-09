@@ -6,6 +6,7 @@ import { OfertaComponent } from './paginas/oferta/oferta.component';
 import { CarritoComponent } from './paginas/carrito/carrito.component';
 import { QuienessomosComponent } from './paginas/quienessomos/quienessomos.component';
 import { FavoritosComponent } from './paginas/favoritos/favoritos.component';
+import { CompraComponent } from './paginas/compra/compra.component';
 
 
 export const routes: Routes = [
@@ -16,5 +17,6 @@ export const routes: Routes = [
     {path:"ofertas",component:OfertaComponent},
     {path:"carrito",component:CarritoComponent},
     {path:"quienessomos",component:QuienessomosComponent},
-    {path:"favoritos",component:FavoritosComponent}
+    {path:"favoritos",component:FavoritosComponent},
+    {path:"compra", component:CompraComponent}
 ]

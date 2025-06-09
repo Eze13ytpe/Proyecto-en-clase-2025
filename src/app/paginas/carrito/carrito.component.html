@@ -31,8 +31,8 @@
         
     </tbody>
 </table>
-<div class="text-end mt-4" *ngif="productosEnCarri5to.length > 0">
-    <h4 class="fw-bold"> Total : {{calcularTotal()}}</h4>
+<div class="text-end mt-4" *ngIf="productosEnCarrito.length > 0">
+    <h4 class="fw-bold"> Total : {{calcularTotal() | currency}}</h4>
     <button class="btn bnt-primary mt-2"(click)="irAFormularioCompra()">
         <i class="bi bi-cart-check"></i>Realizar Compra
     </button>

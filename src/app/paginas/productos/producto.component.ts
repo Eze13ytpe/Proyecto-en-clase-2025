@@ -19,7 +19,7 @@ export class ProductoComponent {
     nombre: 'Nike kyrie 7',
     descripcion:'',
     descBool:false,
-    precio: 100.000,
+    precio: 100000,
     imagen:'/assets/kyrie 7.jpg',
     disponibilidad:true,
     cantidad:2,
@@ -29,7 +29,7 @@ export class ProductoComponent {
       nombre: 'Lebron 20',
       descripcion:'',
       descBool:false,
-      precio: 125.000,
+      precio: 125000,
       imagen:'https://imgs.search.brave.com/c_GpHT0Jsbf1pQTS3xo2_WMH76FTcnqbGZufcCNuF1s/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tb2Rv/emFwYXRpbGxhcy5j/b20vdXBsb2FkL3By/b2R1Y3Rvcy9wb3J0/YWRhL25vcm1hbC9u/aWtlLWxlYnJvbi0y/MC1uaWtlLWxlYnJv/bi0yMC1sZWJyb24y/MDAyNi1hY2M0NGVm/ZDkwZjRmYTI4MWNh/ZjIzZTUzZTcyMjdl/Ni53ZWJw',
       disponibilidad:true,
       cantidad:2,
@@ -39,7 +39,7 @@ export class ProductoComponent {
       nombre: 'kyrie 6',
       descripcion:'chinchulin',
       descBool:false,
-      precio: 200.000,
+      precio: 200000,
       imagen:'https://imgs.search.brave.com/7tp4S7Y7mclH5kei7HfbF3h50zYc_ud_qIipRNRqDIw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c3RvY2tjZW50ZXIu/Y29tLmFyL29uL2Rl/bWFuZHdhcmUuc3Rh/dGljLy0vU2l0ZXMt/MzY1LWRhYnJhLWNh/dGFsb2cvZGVmYXVs/dC9kdzBmM2E1Mzgy/L3Byb2R1Y3RzL05J/RE0xMTI1LTgwMC9O/SURNMTEyNS04MDAt/Mi5KUEc',
       disponibilidad:true,
       cantidad:3
@@ -49,7 +49,7 @@ export class ProductoComponent {
       nombre:'Remera Quimsa',
       descripcion:'',
       descBool:false,
-      precio:45.000,
+      precio:45000,
       imagen:'/assets/quimsa2.png',
       disponibilidad:true,
       cantidad:5
@@ -59,7 +59,7 @@ export class ProductoComponent {
       nombre:'Remera Hispano',
       descripcion:'',
       descBool:false,
-      precio:35.000,
+      precio:35000,
       imagen:'/assets/remera hispano.webp',
       disponibilidad:true,
       cantidad:5
@@ -69,7 +69,7 @@ export class ProductoComponent {
       nombre:'Remera Amancay',
       descripcion:'',
       descBool:false,
-      precio:35.000,
+      precio:35000,
       imagen:'/assets/amancay.webp',
       disponibilidad:true,
       cantidad:5
@@ -79,7 +79,7 @@ export class ProductoComponent {
       nombre:'Remera Argentino',
       descripcion:'',
       descBool:false,
-      precio:39.000,
+      precio:39000,
       imagen:'/assets/argentino.webp',
       disponibilidad:true,
       cantidad:5
@@ -89,7 +89,7 @@ export class ProductoComponent {
       nombre:'Remera San Martin',
       descripcion:'',
       descBool:false,
-      precio:39.000,
+      precio:39000,
       imagen:'/assets/remerarsanma.webp',
       disponibilidad:true,
       cantidad:5
@@ -99,7 +99,7 @@ export class ProductoComponent {
       nombre:'Remera Riachuelo',
       descripcion:'',
       descBool:false,
-      precio:39.000,
+      precio:39000,
       imagen:'/assets/riachuelo.webp',
       disponibilidad:true,
       cantidad:5
@@ -109,7 +109,7 @@ export class ProductoComponent {
       nombre:'zapatillas Curry 11',
       descripcion:'',
       descBool:false,
-      precio:200.000,
+      precio:200000,
       imagen:'/assets/curry11.webp',
       disponibilidad:true,
       cantidad:5
@@ -119,7 +119,7 @@ export class ProductoComponent {
       nombre:'zapatillas KD16',
       descripcion:'',
       descBool:false,
-      precio:300.000,
+      precio:300000,
       imagen:'/assets/KD16.webp',
       disponibilidad:true,
       cantidad:5
@@ -129,7 +129,7 @@ export class ProductoComponent {
       nombre:'zapatillas Lebron 18',
       descripcion:'',
       descBool:false,
-      precio:390.000,
+      precio:390000,
       imagen:'/assets/lebron18.webp',
       disponibilidad:true,
       cantidad:5
