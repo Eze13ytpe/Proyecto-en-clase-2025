@@ -1,20 +1,12 @@
-import {  CommonModule, NgFor } from '@angular/common';
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { producto } from '../../model/producto.model';
-import { CarritoService } from '../../servicios/carrito.service';
-import { FavoritosService } from '../../servicios/favoritos.service';
+import { Injectable } from '@angular/core';
+import { producto } from '../model/producto.model';
 
-@Component({
-  selector: 'app-producto',
-  standalone:true,
-  imports: [NgFor,CommonModule,RouterModule],
-  templateUrl: './producto.component.html',
-  styleUrl: './producto.component.css'
+@Injectable({
+  providedIn: 'root'
 })
-export class ProductoComponent {
-  productos:producto[]=[
-    {
+export class ProductosService {
+  private productos: producto[] = [
+  {
     id:1,
     nombre: 'Nike kyrie 7',
     descripcion:'',
@@ -118,7 +110,7 @@ export class ProductoComponent {
        id:11,
       nombre:'zapatillas KD16',
       descripcion:'',
-      descBool:false,
+      descBool:true,
       precio:300000,
       imagen:'/assets/KD16.webp',
       disponibilidad:true,
@@ -128,26 +120,22 @@ export class ProductoComponent {
       id:12,
       nombre:'zapatillas Lebron 18',
       descripcion:'',
-      descBool:false,
+      descBool:true,
       precio:390000,
       imagen:'/assets/lebron18.webp',
       disponibilidad:true,
       cantidad:5
     }
-  ]
-constructor(private carritoService: CarritoService, private favoritosService: FavoritosService){}
-//metodo para agregar un producto
+  ];
 
-agregar(producto:producto){
-  this.carritoService.agregarAlcarrito(producto)
-  alert('producto agregado al carrito')
-}
-agregarFavorito(producto:producto){
-  this.favoritosService.agregarAFavoritos(producto)
-}
-mostrarDescripcion(producto: producto) {
-  producto.descBool = !producto.descBool;
+  constructor() {}
+
+  getProductos(): producto[] {
+    return this.productos;
+  }
+
+  getDestacados(): producto[] {
+    return this.productos.filter(p => p.descBool);
+  }
 }
 
-
-}

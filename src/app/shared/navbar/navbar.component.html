@@ -1,41 +1,62 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary ">
   <div class="container-fluid">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li>
-          <a href="#"> <i class="fa-solid fa-house fa-2x " style="color: #000000;"></i> </a>
+          <a href="#"><img src="/assets/logonegrosinfondo.png" style="height: 50px; width: 50px;"> </a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" routerLink="/producto">producto</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/ofertas">ofertas</a>
+          <a class="nav-link active" routerLink="/ofertas">ofertas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/contacto">contacto</a>
+          <a class="nav-link active" routerLink="/contacto">contacto</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " routerLink="/quienessomos">Quienes somos</a>
+          <a class="nav-link active" routerLink="/quienessomos">Quienes somos</a>
         </li>
         <div>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/favoritos"><i class="fa-solid fa-star fa-xl" style="color: #FFD43B;" ></i> </a>
-        </li>
-      </div>
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/favoritos"><i style="color: #FFD43B;"></i> Favoritos </a>
+          </li>
+        </div>
       </ul>
-  
+
 
       <div class="navbar-nav me-4 mb-2 mb-lg-0">
+        <div>
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/inicio-sesion"><i style="color: #FFD43B;"></i> <i
+                class="fa-solid fa-user fa-2x"></i> </a>
+          </li>
+        </div>
         <li class="nav-item">
           <a class="nav-link " routerLink="/carrito"><i class="fa-solid fa-cart-shopping fa-2x"
               style="color: #000000;"></i></a>
         </li>
       </div>
 
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+
+      <form class="form">
+        <button>
+          <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-labelledby="search">
+            <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+              stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+        <input class="input" type="text">
+        <button class="reset" type="reset">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
       </form>
     </div>
   </div>
+  <label for="toggle" id="label_toggle"><i class="fa-solid fa-moon fa-2x"></i></label>
+  <input type="checkbox" id="toggle" (click)="cambiarFondo()">
 </nav>

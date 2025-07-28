@@ -4,7 +4,7 @@
         <div class="card">
             <img [src]="item.producto.imagen" alt="{{item.producto.nombre}}">
             <a>{{item.producto.nombre}}</a>
-            <a>{{item.producto.precio }}</a>
+            <a>{{item.producto.precio | currency}}</a>
             <button (click)="eliminarProducto(item.producto.id)">Eliminar </button>
         </div>
     </div>

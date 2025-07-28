@@ -5,11 +5,13 @@ import { producto } from '../model/producto.model';
 
 @Injectable({
   providedIn: 'root'
-})
+}) 
 export class CarritoService {
+  
   private carritoSubject = new BehaviorSubject<{ producto: producto; cantidad: number }[]>([]);
   carrito$ = this.carritoSubject.asObservable()
   agregarAlcarrito(producto: producto) {
+
     const productos = this.carritoSubject.getValue()
     const encontrado = productos.find(p => p.producto.id === producto.id)
     if (encontrado) {

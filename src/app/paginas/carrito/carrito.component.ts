@@ -16,10 +16,11 @@ export class CarritoComponent implements OnInit {
   constructor(private carritoService: CarritoService, private router :Router) { }
 
   ngOnInit(): void {
-    this.carritoService.carrito$.subscribe((productos) => {
+    this.carritoService.carrito$.subscribe((productos) => {   
       this.productosEnCarrito = productos;
       });
   }
+
 
   agregarCantidad(index: number) {
     this.productosEnCarrito[index].cantidad++
@@ -41,7 +42,6 @@ export class CarritoComponent implements OnInit {
   irAFormularioCompra(){
     //Redirije al usuario a la ruta de compra /compra , donde se encuentra el formulario para finalizar la compra
     this.router.navigate([`/compra`])
-
   }
 
   //calcular el total del carritoo de compras

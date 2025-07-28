@@ -1,12 +1,17 @@
-import { NgIf } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ProductosService } from '../../servicios/productos.service';
+import { producto } from '../../model/producto.model';
 
 @Component({
   selector: 'app-inicio',
-  imports: [NgIf],
   templateUrl: './inicio.component.html',
-  styleUrl: './inicio.component.css'
 })
-export class InicioComponent {
- 
+export class InicioComponent implements OnInit {
+  productosDestacados: producto[] = [];
+
+  constructor(private productosService: ProductosService) {}
+
+  ngOnInit(): void {
+    this.productosDestacados = this.productosService.getDestacados();
+  }
 }
