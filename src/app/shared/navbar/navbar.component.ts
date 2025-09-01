@@ -7,7 +7,7 @@ import { producto } from '../../model/producto.model';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterLink, NgIf, CommonModule, RouterModule],
+  imports: [RouterLink, CommonModule, RouterModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })

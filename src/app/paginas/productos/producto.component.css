@@ -1,3 +1,6 @@
+h1{
+  text-align:center;
+}
 /*estilo general*/
 body {
   background-color: black;
@@ -62,7 +65,7 @@ flex-wrap: wrap;
 }
 
 .card {
-   width: 18rem;            /* Opcional, tamaño de cada tarjeta */
+   width: 22rem;            /* Opcional, tamaño de cada tarjeta */
   height: 500px;
   border: 1px solid #ccc;
   border-radius: 10px;

@@ -6,136 +6,198 @@ import { producto } from '../model/producto.model';
 })
 export class ProductosService {
   private productos: producto[] = [
-  {
+
+ {
     id:1,
     nombre: 'Nike kyrie 7',
-    descripcion:'',
-    descBool:false,
+    descripcion:'Zapatillas originales Nike Kyrie 7 edicion',
+    descBool:true,
+    oferta:false,
     precio: 100000,
-    imagen:'/assets/kyrie 7.jpg',
+    imagen:'/assets/kyrie 7.png',
     disponibilidad:true,
     cantidad:2,
     },
     {
       id:2,
-      nombre: 'Lebron 20',
-      descripcion:'',
+      nombre: 'Lebron 18',
+      descripcion:'Zapatillas originales Nike Lebron James 18 edicion',
+      oferta:true,
       descBool:false,
       precio: 125000,
-      imagen:'https://imgs.search.brave.com/c_GpHT0Jsbf1pQTS3xo2_WMH76FTcnqbGZufcCNuF1s/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tb2Rv/emFwYXRpbGxhcy5j/b20vdXBsb2FkL3By/b2R1Y3Rvcy9wb3J0/YWRhL25vcm1hbC9u/aWtlLWxlYnJvbi0y/MC1uaWtlLWxlYnJv/bi0yMC1sZWJyb24y/MDAyNi1hY2M0NGVm/ZDkwZjRmYTI4MWNh/ZjIzZTUzZTcyMjdl/Ni53ZWJw',
+      imagen:'/assets/lebron 18.png',
       disponibilidad:true,
       cantidad:2,
     },
     {
       id: 3,
       nombre: 'kyrie 6',
-      descripcion:'chinchulin',
+      descripcion:'Zapatillas originales Nike Kyrie 6 edicion ',
+      oferta:false,
       descBool:false,
       precio: 200000,
-      imagen:'https://imgs.search.brave.com/7tp4S7Y7mclH5kei7HfbF3h50zYc_ud_qIipRNRqDIw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c3RvY2tjZW50ZXIu/Y29tLmFyL29uL2Rl/bWFuZHdhcmUuc3Rh/dGljLy0vU2l0ZXMt/MzY1LWRhYnJhLWNh/dGFsb2cvZGVmYXVs/dC9kdzBmM2E1Mzgy/L3Byb2R1Y3RzL05J/RE0xMTI1LTgwMC9O/SURNMTEyNS04MDAt/Mi5KUEc',
+      imagen:'/assets/kyrie 6.png',
       disponibilidad:true,
       cantidad:3
     },
     {
       id:4,
       nombre:'Remera Quimsa',
-      descripcion:'',
+      descripcion:'Remera original Quimsa de Santiago Del Estero, La Liga,',
+      oferta:false,
       descBool:false,
       precio:45000,
-      imagen:'/assets/quimsa2.png',
+      imagen:'/assets/remeraQuimsa.png',
       disponibilidad:true,
       cantidad:5
     },
     {
       id:5,
       nombre:'Remera Hispano',
-      descripcion:'',
+      descripcion:'Remera original Hispano de Santa cruz, La liga ',
+      oferta:false,
       descBool:false,
       precio:35000,
-      imagen:'/assets/remera hispano.webp',
+      imagen:'/assets/RemeraHispano.png',
       disponibilidad:true,
       cantidad:5
     },
     {
       id:6,
       nombre:'Remera Amancay',
-      descripcion:'',
+      descripcion:'Remera original Amancay de La Rioja, La liga',
+      oferta:false,
       descBool:false,
       precio:35000,
-      imagen:'/assets/amancay.webp',
+      imagen:'/assets/remeraAmancay.png',
       disponibilidad:true,
       cantidad:5
     },
        {
       id:7,
       nombre:'Remera Argentino',
-      descripcion:'',
+      descripcion:'Remera original Argentino de Buenos Aires, La liga',
+      oferta:false,
       descBool:false,
       precio:39000,
-      imagen:'/assets/argentino.webp',
+      imagen:'/assets/remeraArgentino.png',
       disponibilidad:true,
       cantidad:5
     },
      {
       id:8,
       nombre:'Remera San Martin',
-      descripcion:'',
+      descripcion:'Remera original San Martin de Corrientes, La liga',
+      oferta:true,
       descBool:false,
       precio:39000,
-      imagen:'/assets/remerarsanma.webp',
+      imagen:'/assets/RemeraSanMartin.png',
       disponibilidad:true,
       cantidad:5
     },
     {
       id:9,
       nombre:'Remera Riachuelo',
-      descripcion:'',
+      descripcion:'Remera original de Riachuelo de Buenos Aires, La liga',
+      oferta:true,
       descBool:false,
       precio:39000,
-      imagen:'/assets/riachuelo.webp',
+      imagen:'/assets/remeraRiachuelo.png',
       disponibilidad:true,
       cantidad:5
     },
      {
       id:10,
       nombre:'zapatillas Curry 11',
-      descripcion:'',
+      descripcion:'Zapatillas originales Curry 11 edicion',
+      oferta:true,
       descBool:false,
       precio:200000,
-      imagen:'/assets/curry11.webp',
+      imagen:'/assets/Curry 11.png',
       disponibilidad:true,
       cantidad:5
     },
     {
        id:11,
       nombre:'zapatillas KD16',
-      descripcion:'',
-      descBool:true,
+      descripcion:'Zapatillas originales Kevin Durant 11 edicion',
+      oferta:true,
+      descBool:false,
       precio:300000,
-      imagen:'/assets/KD16.webp',
+      imagen:'/assets/KD 16.png',
       disponibilidad:true,
       cantidad:5
     },
      {
       id:12,
-      nombre:'zapatillas Lebron 18',
-      descripcion:'',
-      descBool:true,
+      nombre:'zapatillas Curry 2',
+      descripcion:'Zapatillas originales Curry 2 edicion',
+      oferta:true,
+      descBool:false,
       precio:390000,
-      imagen:'/assets/lebron18.webp',
+      imagen:'/assets/curry 2.png',
       disponibilidad:true,
       cantidad:5
-    }
+    },
+        {
+      id:13,
+      nombre:'zapatillas Curry 3',
+      descripcion:'Zapatillas originales Curry 3 edicion',
+      oferta:true,
+      descBool:false,
+      precio:390000,
+      imagen:'/assets/curry 3.png',
+      disponibilidad:true,
+      cantidad:5
+    },
+        {
+      id:14,
+      nombre:'zapatillas Curry spawn flotro',
+      descripcion:'Zapatillas originales Curry edicion Spawn Flotro',
+      oferta:true,
+      descBool:false,
+      precio:390000,
+      imagen:'/assets/curryspawnflorto.png',
+      disponibilidad:true,
+      cantidad:5
+    },
+     {
+      id:15,
+      nombre:'Remera Utah Jazz',
+      descripcion:'Remera vintage original Utah Jazz, NBA ',
+      oferta:true,
+      descBool:true,
+      precio:39000,
+      imagen:'/assets/RemeraJazz.png',
+      disponibilidad:true,
+      cantidad:5
+    },
+     {
+      id:16,
+      nombre:'Remera Orlando',
+      descripcion:'Remera vintage original Utah Jazz, NBA',
+      oferta:true,
+      descBool:true,
+      precio:39000,
+      imagen:'/assets/remeraOrlando.png',
+      disponibilidad:true,
+      cantidad:5
+    },
+
   ];
 
   constructor() {}
-
+  
   getProductos(): producto[] {
     return this.productos;
   }
 
   getDestacados(): producto[] {
     return this.productos.filter(p => p.descBool);
+  }
+
+  getOfertas():producto[]{
+    return this.productos.filter(p =>p.oferta )
   }
 }
 
