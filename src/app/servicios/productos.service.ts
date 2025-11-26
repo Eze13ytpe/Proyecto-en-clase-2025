@@ -17,6 +17,8 @@ export class ProductosService {
     imagen:'/assets/kyrie 7.png',
     disponibilidad:true,
     cantidad:2,
+    categoria:'zapatillas',
+    marca:'Nike'
     },
     {
       id:2,
@@ -28,6 +30,8 @@ export class ProductosService {
       imagen:'/assets/lebron 18.png',
       disponibilidad:true,
       cantidad:2,
+      categoria:'zapatillas',
+      marca:'Nike'
     },
     {
       id: 3,
@@ -38,7 +42,9 @@ export class ProductosService {
       precio: 200000,
       imagen:'/assets/kyrie 6.png',
       disponibilidad:true,
-      cantidad:3
+      cantidad:3,
+      categoria:'zapatillas',
+      marca:'Nike'
     },
     {
       id:4,
@@ -49,7 +55,9 @@ export class ProductosService {
       precio:45000,
       imagen:'/assets/remeraQuimsa.png',
       disponibilidad:true,
-      cantidad:5
+      cantidad:5, 
+    categoria:'remeras',
+    marca:'La liga'
     },
     {
       id:5,
@@ -60,7 +68,9 @@ export class ProductosService {
       precio:35000,
       imagen:'/assets/RemeraHispano.png',
       disponibilidad:true,
-      cantidad:5
+      cantidad:5,
+      categoria:'remeras', 
+      marca:'La liga'
     },
     {
       id:6,
@@ -71,7 +81,9 @@ export class ProductosService {
       precio:35000,
       imagen:'/assets/remeraAmancay.png',
       disponibilidad:true,
-      cantidad:5
+      cantidad:5,
+      categoria:'remeras',
+      marca:'La liga'
     },
        {
       id:7,
@@ -82,7 +94,9 @@ export class ProductosService {
       precio:39000,
       imagen:'/assets/remeraArgentino.png',
       disponibilidad:true,
-      cantidad:5
+      cantidad:5,
+      categoria:'remeras',
+      marca:'La liga'
     },
      {
       id:8,
@@ -93,7 +107,9 @@ export class ProductosService {
       precio:39000,
       imagen:'/assets/RemeraSanMartin.png',
       disponibilidad:true,
-      cantidad:5
+      cantidad:5,
+      categoria:'remeras',
+      marca:'La liga'
     },
     {
       id:9,
@@ -105,6 +121,8 @@ export class ProductosService {
       imagen:'/assets/remeraRiachuelo.png',
       disponibilidad:true,
       cantidad:5
+    ,categoria:'remeras',
+    marca:'La liga'
     },
      {
       id:10,
@@ -115,7 +133,9 @@ export class ProductosService {
       precio:200000,
       imagen:'/assets/Curry 11.png',
       disponibilidad:true,
-      cantidad:5
+      cantidad:5,
+      categoria:'zapatillas',
+      marca:'Under Armour'
     },
     {
        id:11,
@@ -127,6 +147,8 @@ export class ProductosService {
       imagen:'/assets/KD 16.png',
       disponibilidad:true,
       cantidad:5
+    ,categoria:'zapatillas',
+    marca:'Nike'
     },
      {
       id:12,
@@ -137,7 +159,9 @@ export class ProductosService {
       precio:390000,
       imagen:'/assets/curry 2.png',
       disponibilidad:true,
-      cantidad:5
+      cantidad:5,
+      categoria:'zapatillas',
+      marca:'Under Armour'
     },
         {
       id:13,
@@ -148,7 +172,9 @@ export class ProductosService {
       precio:390000,
       imagen:'/assets/curry 3.png',
       disponibilidad:true,
-      cantidad:5
+      cantidad:5,
+      categoria:'zapatillas',
+      marca:'Under Armour'
     },
         {
       id:14,
@@ -159,7 +185,9 @@ export class ProductosService {
       precio:390000,
       imagen:'/assets/curryspawnflorto.png',
       disponibilidad:true,
-      cantidad:5
+      cantidad:5,
+      categoria:'zapatillas',
+      marca:'Under Armour'  
     },
      {
       id:15,
@@ -170,7 +198,9 @@ export class ProductosService {
       precio:39000,
       imagen:'/assets/RemeraJazz.png',
       disponibilidad:true,
-      cantidad:5
+      cantidad:5,
+      categoria:'remeras',
+      marca:'La liga'
     },
      {
       id:16,
@@ -181,7 +211,9 @@ export class ProductosService {
       precio:39000,
       imagen:'/assets/remeraOrlando.png',
       disponibilidad:true,
-      cantidad:5
+      cantidad:5,
+      categoria:'remeras',    
+      marca:'La liga'
     },
 
   ];

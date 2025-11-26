@@ -1,4 +1,69 @@
-<h1 >Productos</h1>
+<h1>Productos</h1>
+
+<div class="filtros">
+  <div class="row mb-3">
+    <div class="col md-3">
+      <label>Categoria:</label>
+      <select class="form-select" [(ngModel)]="selectedCategory" name="categoria">
+        <option value="">Todas</option>
+        <option *ngFor="let categoria of categoria" [value]="categoria">{{categoria}}</option>
+      </select>
+    </div>
+
+
+    <div class="col-md-3">
+      <label>Marca:</label>
+      <select class="form-select" [(ngModel)]="selectedBrand" name="marca">
+        <option value="">Todas</option>
+        <option *ngFor="let marca of marca" [value]="marca">{{marca}}</option>
+      </select>
+    </div>
+
+
+    <div class="col-md-2">
+      <label>Precio min:</label>
+      <input type="number" class="form-control" [(ngModel)]="minprecio" name="minprecio">
+    </div>
+
+    <div class="col-md-2">
+      <label>Precio max:</label>
+      <input type="number" class="form-control" [(ngModel)]="maxprecio" name="maxprecio">
+    </div>
+
+    <div class="col-md-2 d-flex align-items-end">
+      <button class="btn btn-secondary w-100" (click)="resetFilters()">
+        <div class="button-top">Limpiar</div>
+      </button>
+    </div>
+  </div>
+
+  <div class="card-container">
+    <ng-container *ngIf="filteredProducts && filteredProducts.length">
+      <ng-container *ngFor="let producto of filteredProducts">
+        <div *ngIf="producto.disponibilidad" class="card">
+          <img [src]="producto.imagen" alt="{{producto.nombre}}" class="product-image">
+          <h2>{{producto.nombre}}</h2>
+          <p>{{producto.descripcion}}</p>
+          <p>Precio: {{producto.precio}}</p>
+          <p>Cantidad: {{producto.cantidad}}</p>
+          <p>Categoria: {{producto.categoria}}</p>
+          <p>Marca: {{producto.marca}}</p>
+          <i class="bi bi-hand-thumbs-up"></i>
+
+          <button type="button" class="btn btn-outline-primary" (click)="agregar(producto)">Agregar al Carrito</button>
+          <button type="button" class="btn btn-outline-primary" (click)="agregarFavorito(producto)">Agregar a
+            favoritos</button>
+        </div>
+      </ng-container>
+
+
+      <div *ngIf="filteredProducts.length === 0" class="text-muted">
+        No se encontraron productos que coincidan con los filtros.
+      </div>
+    </ng-container>
+
+</div>
+
 <div class="card-cantainer">
   <ng-container *ngIf=" productos && productos.length">
     <ng-container *ngFor="let producto of productos">
@@ -21,19 +86,15 @@
         <br>
         <img [src]="producto.imagen" alt="{{producto.nombre}}" class="product-image">
         <h2>{{producto.nombre}}</h2>
-        <input type="button" value="Descripción" (click)="mostrarDescripcion(producto)">
+
+        <p>Precio : {{producto.precio | currency}}</p>
+        <input id="descripcion" type="button" value="Descripción" (click)="mostrarDescripcion(producto)">
         <ng-container *ngIf="producto.descBool">
           <p>{{producto.descripcion || 'Sin descripción disponible.'}}</p>
         </ng-container>
-
-        <p>Precio : {{producto.precio | currency}}</p>
-        <button type="button" class="btn btn-outline-primary" (click)="agregar(producto)">Agregar al Carrito</button>
+        <button type="button" class="btn btn-outline-primary" id="agregarCarrito" (click)="agregar(producto)">Agregar al
+          Carrito</button>
       </div>
     </ng-container>
   </ng-container>
 </div>
-<!--      
-<div [ngClass]="{'activo':usuario.activo , 'inactivo':usuario.activo}">
-  {{usuario.nombre}} 
-</div>
-  -->

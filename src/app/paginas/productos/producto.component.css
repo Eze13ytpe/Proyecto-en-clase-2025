@@ -29,9 +29,9 @@ body {
 
 
 /*efecto hover en la tarjeta*/
-.card-hover {
+.card:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px rgba(69, 69, 69, 0.2);
 }
 
 /*imagen dentro de la tarjeta*/
@@ -67,11 +67,13 @@ flex-wrap: wrap;
 .card {
    width: 22rem;            /* Opcional, tamaño de cada tarjeta */
   height: 500px;
-  border: 1px solid #ccc;
+  border: 2px solid rgba(114,0,16);;
   border-radius: 10px;
   padding: 10px;
   height: fit-content;
   background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: rgba(111, 1, 1, 0.415);
 }
 
 /* responsibilidad en pantalla chica    */
@@ -122,4 +124,39 @@ flex-wrap: wrap;
 
 .container input:checked~svg {
   fill: #ffeb49;
+}
+#descripcion {
+  background-color: rgb(255, 255, 255);
+  color: rgb(114, 0, 16);
+  border: 1px solid rgb(114, 0, 16);
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+#agregarCarrito {
+  background-color: rgb(255, 255, 255);
+  color: rgb(114, 0, 16);
+  border: 1px solid rgb(114, 0, 16);
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+#descripcion:hover {
+  background-color: rgb(114, 0, 16);
+  color: white;
+}
+#agregarCarrito:hover {
+  background-color: rgb(114, 0, 16);
+  color: white;
 }

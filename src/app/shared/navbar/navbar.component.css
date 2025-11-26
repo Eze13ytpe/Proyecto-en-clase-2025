@@ -1,4 +1,25 @@
-.form button {
+.navbar {
+  padding: 0.5rem 1rem;
+  background-color:rgba(114,0,16);
+  color:aliceblue;
+}
+.navbar .nav-link {
+  color: white;
+  font-size:xx-large;
+}
+.center-nav {
+  display: flex;
+  justify-content: center;     /* centra horizontalmente */
+  gap: 1.5rem;                 /* separa los items de forma uniforme */
+}
+
+.center-nav .nav-link {
+  font-size: 1rem;
+  color: white !important;
+}
+
+
+.form button {    
   border: none;
   background: none;
   color: #8b8ba7;
@@ -20,7 +41,7 @@
   align-items: center;
   padding-inline: 0.8em;
   border-radius: var(--border-radius);
-  transition: border-radius 0.5s ease;
+  transition: bo  rder-radius 0.5s ease;
   background: var(--input-bg,#fff);
 }
 /* styling of Input */
