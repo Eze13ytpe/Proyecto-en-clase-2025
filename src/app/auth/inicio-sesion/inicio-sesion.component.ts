@@ -56,8 +56,8 @@ export class InicioSesionComponent {
       },
 
       // Si ocurre un error (credenciales incorrectas o fallo del servidor):
-      error: (err) => {
-        console.error('Error al iniciar sesión', err);
+      error: (error) => {
+        console.error('Error al iniciar sesión', error);
 
         // Mensaje destinado a mostrarse en la interfaz.
         this.error = 'Credenciales incorrectas o error en el servidor.';

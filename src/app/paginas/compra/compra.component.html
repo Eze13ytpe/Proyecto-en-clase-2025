@@ -1,13 +1,6 @@
-<div class="container mt-4">
-
-  <h2 class="text-center mb-4">Finalizar Compra</h2>
-
-  <div *ngIf="mensaje" class="alert alert-info text-center">
-    {{ mensaje }}
-  </div>
-
-  <div class="card shadow-sm mb-4" *ngIf="productos.length > 0">
-    <div class="card-header bg-primary text-white">
+<div class="container mt-5" style="max-width: 900px; ;">
+<div class="card shadow-sm mb-4" *ngIf="productos.length > 0">
+    <div class="card-header text-white" style="background-color: rgb(114, 0, 16);">
       <strong>Productos en tu carrito</strong>
     </div>
     <ul class="list-group list-group-flush">
@@ -40,12 +33,12 @@
   </div>
 
   <div class="card shadow-sm" *ngIf="productos.length > 0">
-    <div class="card-header bg-success text-white">Datos de envío</div>
+    <div class="card-header  text-white " style="background-color: rgb(114, 0, 16);" >Datos de envío</div>
     <div class="card-body">
       <input class="form-control mb-3" placeholder="Dirección" [(ngModel)]="datos.direccion">
       <input class="form-control mb-3" placeholder="Teléfono" [(ngModel)]="datos.telefono">
 
-      <button class="btn btn-success w-100"
+      <button class="btn btn-success w-100" style="background-color: rgb(114, 0, 16);"
         (click)="finalizarCompra()"
         [disabled]="cargando">
         {{ cargando ? 'Procesando...' : 'Confirmar compra' }}

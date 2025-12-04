@@ -1,1 +1,57 @@
-<p>favoritos works!</p>
+<!-- <h1 class="text-center my-4">FAVORITOS</h1>
+
+<div *ngIf="productosFavoritos.length === 0" class="alert alert-info text-center">
+  No hay productos en favoritos.
+</div>
+
+<div *ngIf="productosFavoritos.length > 0" class="container">
+  <div class="row g-4">
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3"
+         *ngFor="let producto of productosFavoritos">
+
+      <div class="card h-100 shadow-sm">
+
+      
+        <img [src]="'http://localhost/api_proyecto/public/' + producto.imagen"
+             [alt]="producto.nombre"
+             class="card-img-top"
+             style="height: 180px; object-fit: cover; border-radius: 8px 8px 0 0;">
+
+        <div class="card-body d-flex flex-column">
+
+          
+          <h5 class="card-title fw-bold">{{ producto.nombre }}</h5>
+
+         
+          <p class="card-text text-muted" style="flex: 1;">
+            {{ producto.descripcion }}
+          </p>
+
+          <h5 class="fw-bold text-primary mb-3">
+            ${{ producto.precio }}
+          </h5>
+
+          
+          <div class="d-flex gap-2 mt-auto">
+
+            <button class="btn btn-success btn-sm flex-grow-1"
+                    (click)="agregarAlCarrito(producto)">
+              <i class="bi bi-cart-plus"></i> Agregar
+            </button>
+
+            <button class="btn btn-danger btn-sm"
+                    (click)="eliminarFavorito(producto.id)">
+              <i class="bi bi-trash"></i>
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+ -->

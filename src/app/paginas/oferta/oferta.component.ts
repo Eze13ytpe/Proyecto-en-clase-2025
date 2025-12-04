@@ -1,14 +1,15 @@
-import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+// CORRECCIÓN: Cambiar el import
+import { ProductService } from '../../servicios/product.service'; // Sin "s"
 import { producto } from '../../model/producto.model';
-import { ProductosService } from '../../servicios/productos.service';
 import { CarritoService } from '../../servicios/carrito.service';
-import { FavoritosService } from '../../servicios/favoritos.service';
+import { FavoritoService } from '../../servicios/favoritos.service';
 
 @Component({
   selector: 'app-oferta',
-  imports: [CommonModule, RouterModule],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './oferta.component.html',
   styleUrl: './oferta.component.css'
 })
@@ -16,26 +17,23 @@ export class OfertaComponent implements OnInit {
   productosEnOferta: producto[] = [];
 
   constructor(
-    private productosService: ProductosService,
+    private productService: ProductService,
     private carritoService: CarritoService,
-    private favoritosService: FavoritosService
+    private FavoritoService: FavoritoService
   ) {}
 
   ngOnInit(): void {
     // Solo productos con oferta: true
-    this.productosEnOferta = this.productosService.getOfertas();
-  }
-
-  mostrarDescripcion(producto: producto) {
-    producto.descBool = !producto.descBool;
+   // this.productosEnOferta = this.productService.getOfer();
   }
 
   agregarFavorito(producto: producto) {
-    this.favoritosService.agregarAFavoritos(producto);
+    this.FavoritoService.agregarAFavoritos(producto);
   }
 
   agregar(producto: producto) {
-    this.carritoService.agregarAlcarrito(producto);
+    this.carritoService.agregarAlCarrito(producto);
     alert('producto agregado al carrito');
   }
 }
+

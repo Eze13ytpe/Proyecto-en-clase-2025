@@ -8,33 +8,95 @@ import { producto } from '../model/producto.model';
   providedIn: 'root'
 })
 export class ProductService {
-  //URL base del modulo de productos en la api
-  private apiURL = 'http://localhost/api_proyecto/public/products';
+  // URL base para todos los endpoints de productos.
+  // Backend tiene rutas como:
+  //   GET    /products
+  //   POST   /products
+  //   PUT    /products/:id
+  //   DELETE /products/:id
+  private apiUrl = 'http://localhost/api_proyecto/public/products';
 
-  constructor(private http: HttpClient) { }
-  //construye las cabeceras HTTP necesarias para las solicitudes protegidas
-  //si existe un token en localSroeage, lo incluye como cabecera de autorizacion
+  constructor(private http: HttpClient) {}
 
-  private getHeaders(): HttpHeaders {
-    const token = localStorage.getItem('token');
-    let headers = new HttpHeaders({
-      'authorization': token ? `Bearer ${token}` : ''
-    });
-    return headers
+  // ============================================================
+  // OBTENER TODOS LOS PRODUCTOS
+  // GET /products
+  // ============================================================
+  obtenerProductos(): Observable<any[]> {
+    // No requiere autenticación.
+    return this.http.get<any[]>(this.apiUrl);
   }
 
-//Obtiene la lista completa de productos desde la api
-// Es una ruta publica y no requiere token
-getProducts() : Observable <producto[]> {
-  return this.http.get<producto[]>(`${this.apiURL}`)
-  .pipe(catchError(this.handleError));
+  // ============================================================
+  // CREAR PRODUCTO (solo admin)
+  // POST /products
+  // Se envía FormData porque incluye imágenes.
+  // ============================================================
+  crearProducto(formData: FormData): Observable<any> {
+    return this.http.post(
+      this.apiUrl,
+      formData,
+      {
+        // Content-Type debe quedar vacío para que el navegador
+        // genere el multipart/form-data automáticamente.
+        headers: this.getAuthHeaders(false)
+      }
+    );
+  }
+
+  // ============================================================
+  // ACTUALIZAR PRODUCTO (solo admin)
+  // PUT /products/:id
+  // Como Angular no manda PUT con FormData correctamente,
+  // se usa técnica _method=PUT que el backend interpreta.
+  // ============================================================
+  actualizarProducto(id: number, formData: FormData): Observable<any> {
+  // NO usar PUT, NO usar _method en la URL.
+  return this.http.post(
+    `${this.apiUrl}/${id}`,
+    formData,
+    {
+      headers: this.getAuthHeaders(false)
+    }
+  );
 }
 
-//obtiene un producto especifico segun su identidicador
-getProductById(id: number) : Observable <producto> {
-  return this.http.get<producto>(`${this.apiURL}/${id}`)
-  .pipe(catchError(this.handleError));
 
+  // ============================================================
+  // ELIMINAR PRODUCTO (solo admin)
+  // DELETE /products/:id
+  // ============================================================
+  eliminarProducto(id: number): Observable<any> {
+    return this.http.delete(
+      `${this.apiUrl}/${id}`,
+      {
+        headers: this.getAuthHeaders()
+      }
+    );
+  }
+
+  // ============================================================
+  // HEADERS DE AUTENTICACIÓN
+  // Si json=true → se agrega Content-Type: application/json
+  // Si json=false → se omite para enviar FormData
+  // ============================================================
+  private getAuthHeaders(json: boolean = true): HttpHeaders {
+    const token = (typeof localStorage !== 'undefined')
+      ? localStorage.getItem('token') || ''
+      : '';
+
+    // Siempre enviamos el token.
+    const headers: any = { Authorization: `Bearer ${token}` };
+
+    // Solo agregamos JSON cuando NO se envía FormData.
+    if (json) {
+      headers['Content-Type'] = 'application/json';
+    }
+
+    return new HttpHeaders(headers);
 
 }
+
+
+
 }

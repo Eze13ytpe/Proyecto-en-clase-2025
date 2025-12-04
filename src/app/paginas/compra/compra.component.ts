@@ -4,7 +4,7 @@ import { CompraService } from '../../servicios/compra.service';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { error } from 'node:console';
+import { error } from 'console';
 
 @Component({
   selector: 'app-compra',
@@ -80,7 +80,7 @@ export class CompraComponent implements OnInit {
 
     // Datos adicionales del comprador (se envían al backend si se usan).
     const data = {
-      direccion: this.datos.direccion,
+      direccion: this.datos.direccion ,
       telefono: this.datos.telefono
     };
 
@@ -104,8 +104,8 @@ export class CompraComponent implements OnInit {
       },
 
       // Si hubo error en el proceso:
-      error: err => {
-        console.error(err);
+      error: error => {
+        console.error(error);
         this.mensaje = 'Error al procesar compra.';
         this.cargando = false;
       }

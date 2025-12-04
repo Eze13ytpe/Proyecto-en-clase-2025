@@ -13,10 +13,10 @@ body {
   display: flex;
   justify-content: center;
   /*centra las tarjetas*/
-  gap: 30px;
+  gap: 10px;
   /*espacio entre las tarjetas*/
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 5px;
 
 }
 
@@ -146,7 +146,7 @@ flex-wrap: wrap;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 15px;
   margin: 5px 2px;
   cursor: pointer;
   border-radius: 12px;
