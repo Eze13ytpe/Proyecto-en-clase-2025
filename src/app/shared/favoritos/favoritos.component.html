@@ -1,4 +1,4 @@
-<!-- <h1 class="text-center my-4">FAVORITOS</h1>
+<h1 class="text-center my-4">FAVORITOS</h1>
 
 <div *ngIf="productosFavoritos.length === 0" class="alert alert-info text-center">
   No hay productos en favoritos.
@@ -12,7 +12,7 @@
 
       <div class="card h-100 shadow-sm">
 
-      
+        <!-- Imagen desde API -->
         <img [src]="'http://localhost/api_proyecto/public/' + producto.imagen"
              [alt]="producto.nombre"
              class="card-img-top"
@@ -20,19 +20,20 @@
 
         <div class="card-body d-flex flex-column">
 
-          
+          <!-- Nombre -->
           <h5 class="card-title fw-bold">{{ producto.nombre }}</h5>
 
-         
+          <!-- Descripción -->
           <p class="card-text text-muted" style="flex: 1;">
             {{ producto.descripcion }}
           </p>
 
+          <!-- Precio -->
           <h5 class="fw-bold text-primary mb-3">
             ${{ producto.precio }}
           </h5>
 
-          
+          <!-- Acciones -->
           <div class="d-flex gap-2 mt-auto">
 
             <button class="btn btn-success btn-sm flex-grow-1"
@@ -54,4 +55,3 @@
 
   </div>
 </div>
- -->

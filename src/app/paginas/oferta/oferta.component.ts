@@ -5,11 +5,12 @@ import { ProductService } from '../../servicios/product.service'; // Sin "s"
 import { producto } from '../../model/producto.model';
 import { CarritoService } from '../../servicios/carrito.service';
 import { FavoritoService } from '../../servicios/favoritos.service';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-oferta',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink ],
   templateUrl: './oferta.component.html',
   styleUrl: './oferta.component.css'
 })

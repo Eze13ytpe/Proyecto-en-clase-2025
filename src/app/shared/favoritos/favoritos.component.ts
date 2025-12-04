@@ -15,7 +15,6 @@ import { FavoritoService } from '../../servicios/favoritos.service';
   imports: [CommonModule,RouterModule,FormsModule],
 })
 export class FavoritosComponent implements OnInit {
-
   // Se define una propiedad para almacenar los productos marcados como favoritos
 productosFavoritos: producto[] = [];
 
@@ -25,7 +24,6 @@ constructor(
   private carritoService: CarritoService      // Servicio para manejar el carrito de compras
 ) {}
 
-/*
 // Método del ciclo de vida de Angular que se ejecuta al iniciar el componente
 ngOnInit(): void {
   // Se suscribe al observable de favoritos del servicio
@@ -41,10 +39,10 @@ eliminarFavorito(productoId: number) {
   this.FavoritoService.eliminarDeFavoritos(productoId);
 }
 
-
+// Método para agregar un producto al carrito de compras
 agregarAlCarrito(producto: producto) {
-
+  // Llama al servicio de carrito y le pasa el producto seleccionado
   this.carritoService.agregarAlCarrito(producto);
 }
-*/
+
 }
